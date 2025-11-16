@@ -1,5 +1,6 @@
-package AlgoExpert;
+package arrays;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ public class TwoNumberSum {
             System.out.println("Sorry the array does not contain parts of this target Sum of: " + target);
         } else {
             System.out.println("We found the following parts for the target sum: " + target + ": "+ result[0] + " and " + result[1]);
-            System.out.println(result);
+            System.out.println(Arrays.toString(result));
         }
         System.out.println("The End");
     }
@@ -37,16 +38,15 @@ public class TwoNumberSum {
         EDGE CASE: make sure the other half is not not the same as array[i]
         */
         Set<Integer> set = new HashSet<>();
-        for(int j=0; j<array.length; j++){
-            set.add(array[j]);
+        for (int k : array) {
+            set.add(k);
         }
 
-        int other_half=0;
-        for(int i=0; i<array.length; i++){
-            other_half = targetSum - array[i];
-            if(set.contains(other_half) && other_half!=array[i]){
-                int[] result = {array[i], other_half};
-                return result;
+        int other_half;
+        for (int j : array) {
+            other_half = targetSum - j;
+            if (set.contains(other_half) && other_half != j) {
+                return new int[]{j, other_half};
             }
         }//for
         return new int[0];
