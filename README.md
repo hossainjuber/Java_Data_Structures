@@ -140,12 +140,5 @@ Feel free to:
 
 This project is open-source under the **MIT License**.
 
----
 
-If you'd like, I can also generate:
-✅ A table of contents
-✅ Badges (build, license, stars, etc.)
-✅ Code snippets for each section
-✅ A project logo/banner
-Just let me know!
 
